@@ -1,0 +1,50 @@
+Reto 3: Grupo P24_C2
+ Número máximo de ficheros: 4
+Tipo de trabajo:  Individual
+El almacén  “Estudio H”, requiere un programa para el manejo del inventario de los artículos de ropa que vende, para lo cual se requiere una clase llamada “funcionalidad” que contenga los siguientes métodos:
+
+1.(Vale 1) El método “grupos” que tiene como dato de entrada una lista de las clases de artículos de ropa que vende el almacén (en la posición i-ésima de la lista está la clase de dicha ropa). La función debe generar una lista con las clases de ropa sin repetición.
+
+ Por ejemplo, si el almacén tiene 10 artículos de ropa y cada uno tiene la siguiente clase:
+
+ [pantalon, falda, pantalon, vestido, blusa, sudadera, pantalon, falda, blusa, vestido]
+
+ Debe devolver la lista: [pantalón, falda, vestido, blusa, sudadera]
+
+ 2. (Vale 1) También se debe implementar un método llamado “faltantes” con los siguientes datos de entrada: una lista con los números de códigos de los artículos de ropa que no tienen en el almacén; la lista de las clases de cada artículo de ropa del almacén; y una clase de artículos. El método retorna una lista con los números de dicha clase que hacen falta en el almacén.
+
+ Por ejemplo, si se ejecuta el método:
+
+ faltantes([2,3,6,8],  [pantalon, falda, pantalon, vestido, blusa, sudadera, pantalon falda, pantalón, vestido], pantalon)
+
+ 
+
+El método debe retornar la lista: [2, 6]
+
+ Nótese que los códigos de los artículos de ropa empiezan en cero (0) y van hasta el nueve (9)
+
+  3. (Vale 1) hacer un método llamada “inexistentes” con los siguientes datos de entrada: una lista con los códigos de los artículos de la ropa que se venden en otro almacén llamado  “Moda sport”; y una lista con los códigos de los artículos de la ropa que se venden en el almacén“ Estudio H”. La función devuelve otra lista con los códigos de los artículos de la ropa del almacén “Moda Sport” que le interesaría vender al almacén  “Estudio H”.
+
+ 
+
+Por ejemplo, si se ejecuta el método:
+
+ inexistentes([3,5,7,10,15,16],[4,10,5,8])
+
+ Se debe retornar la lista: [3,7,15,16]
+
+ 
+
+4. (Vale 1) Los almacenes desean intercambiar entre ellos artículos de ropa que no tengan para la venta, pero que si estén a la venta en el otro almacén.
+
+  Crear otro método llamada “trueque”, que reciba dos listas: una con los códigos de los artículos que se venden en el almacén  “Estudio H”; y otra lista con los códigos de los artículos que vende el almacén “Moda Sport”. El método debe retornar la cantidad de los artículos que se pueden intercambiar.
+
+ Por ejemplo, al ejecutar la función:
+
+trueque ([3,5,7,10,15,16],[4,10,5,8]) 
+
+Se debe retornar 2, porque al almacén “Estudio H” le interesa los productos [4,8], mientras que al almacén “Moda Sport” le interesa cuatro productos [3,7,15,16], entonces se pueden intercambiar 2 productos. En este caso solo se puede intercambiar 2 productos. Para que sea evaluada correctamente, la función debe retornar un Integer.
+
+ Entrada:
+
+Este programa no requiere entrada. Ni generará salida. Se requiere que el estudiante genere un archivo con el nombre funcionalidad.java y que se respeten los nombres de las funciones dadas y sus parámetros.

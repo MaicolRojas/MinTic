@@ -1,0 +1,252 @@
+Reto 4: Grupo P24_C2
+ Número máximo de ficheros: 8
+Tipo de trabajo:  Individual
+
+Concurso de baile y canto
+
+Un programa de diversión en televisión tiene un concurso para personas que canten o bailen. Los productores del programa lo acaban de contratar para realizar una primera implementación de una base de datos que permita administrar los participantes del concurso  de canto y baile. Para realizar la base de datos se tiene que una Canción tiene un nombre, un género y el año.
+
+Mientras que un Baile tiene nombre, antigüedad (años que lleva la canción) y duración de la canción. Adicionalmente,  cada canción tiene un cantante (el cantante original), del cual se desea guardar su nombre, apellido y nacionalidad. Luego de revisar las necesidades, se decide construir programArtist, en donde aparte de tener la información anteriormente descrita, se puede tener el listado de participantes inscritos al programa de programArtist (el participante tendrá nombres, apellidos, email, celular, alias, contraseña, y fecha de nacimiento. El alias o "username" será el identificador único). También se llevara un registro de la participación los participantes al concurso de canto y baile y su respectiva fecha y hora en la que se presentaran.
+
+Por ahora, los productores de este programa quieren que usted construya un modelo de datos que permita almacenar y consultar de manera eficiente toda la información necesaria para el funcionamiento de programArtist.
+
+A continuación se presenta:
+
+  Modelo Relacional,
+
+https://docs.google.com/drawings/d/e/2PACX-1vSJoAXMh8x_Q5Ehx99iy-h8L9l_YlKuzKl0OCkEMWfCajGuDcJq6JumIKVG8NtxEiDYig9zL6u7QQgf/pub?w=960&h=720
+
+ Esto quiere decir que usted debe construir:
+
+
+
+2.  Código SQL para generar dichas tablas, e inserción de datos:
+
+
+
+2.1 Crear los siguientes canciones (exactamente):
+
+CANCIONES
+
+Amiga
+
+Las locuras mías
+
+Gracias a ti
+
+Tu
+
+La gata bajo la lluvia
+
+ 
+
+Amiga
+Genero: Balada
+
+Año:1990
+Quien canta: Miguel Bose
+
+ 
+
+Las locuras mías
+
+Género: vallenato
+
+Año: 2019
+
+Quien canta: Silvestre Dangond
+
+ 
+
+Gracias a ti
+
+Género: popular
+
+Año: 2020
+
+Quien canta: Jeison Jiménez
+
+ 
+
+Tu
+
+Género: popular
+
+Año:2019
+
+Quien canta: Carin León
+
+ 
+
+BAILES
+Cumbia
+
+Samba
+
+Danza oriental
+
+Salsa
+
+Danza irlandesa
+
+Flamenco
+
+Danza clásica
+
+ 
+
+La cumbia tiene una antigüedad de 40 años y el baile dura 5 minutos.
+
+La samba tiene una antigüedad de 50 años y el baile dura 5 minutos.
+
+Break dance tiene una antigüedad de 30 años y el baile dura 4 minutos.
+
+La Sala tiene una antigüedad de 30 años y el baile dura 4 minutos.
+
+La danza irlandesa tiene una antigüedad de 34 años y el baile dura 7 minutos.
+
+El Flamenco tiene una antigüedad de 35 años y el baile dura 6 minutos.
+
+La Polca tiene una antigüedad de 50 años y el baile dura 6 minutos.
+
+La Danza clásica tiene una antigüedad de 56 años y el baile dura 5 minutos.
+
+ 
+
+2.2 Crear los siguientes cantantes (exactamente):
+
+ Miguel Bose es español
+
+Silvestre Dangond es colombiano
+
+Jeisón Jimenez es colombiano
+
+Carin León es mexicano
+
+Rocio Durcal es española
+
+ 
+
+ 
+
+2.3 Crear los siguientes participantes (exactamente)- El primero es el alias y el segundo es su nombre y apellido. Los otros datos llenarlos libremente (recordar que el alias es la llave primaria):
+
+rortiz, Roberto Ortiz
+
+paploper, Pablo Perez
+
+nataper, Natali perdomo
+
+jaironi, Jairo Nieto
+
+Jairve, Jair Velasco
+
+luisco, Luis Cortez
+
+renegó, Rene Gómez
+
+camiru, Camilo Rueda
+
+ 
+
+2.4 Registrar las siguientes presentaciones de los participantes al concurso de canto y baile:
+
+rortiz canto amiga el ‘10/08/2021 20:00’
+
+rortiz canto tu el 15/08/2021 18:30’
+
+rortiz bailo salsa el ‘20/08/2021 20:3018:30’
+
+pabloper canto amiga el ‘10/08/2021 20:30
+
+nataper canto gracias a ti  el ‘14/08/2021 20:30’
+
+nataper bailo cumbia  el ‘15/08/2018 21:30’
+
+nataper bailo cumbia  el ‘14/08/2021 15:30’
+
+jaironi bailo cumbia  el ‘14/08/2021 15:30’
+
+jaironi bailo samba  el ‘13/08/2021 18:30’
+
+jairve bailo break dance  el ‘16/08/2021 20:30’
+
+jairve bailo salsa  el ‘14/08/2021  18:30:20’
+
+jairve bailo flamenco a ver El patito feo  el ‘14/08/2021 18:30’
+
+renego bailo danza irlandesa  el ‘12/08/2021 21:30’
+
+camiru canto las locuras mías el ‘13/08/2021 17:30’
+
+camiru canto tú el ‘15/08/2021 18:30’
+
+camiru canto la gata bajo la lluvia el ‘16/08/2021 18:30’
+
+ 
+
+NOTA: Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
+
+Ejemplo: Para crear la tabla cantante se debe crear el siguiente script:
+
+create table cantante(
+    can_id  int primary key,
+    can_nombre  char(20),
+    can_apellido char(20),
+    can_nacionalidad  char(40)
+);
+insert into cantante values (101, "Miguel "," Bose ", "español");
+insert into cantante values (102, "Silvestre ", "Dangond ", "colombiano");
+insert into cantante values (103, "Jeison ", "Jiménez", "colombiano");
+insert into cantante values (104, "Carin", "León", "mexicano");
+insert into cantante values (105, "Roció", "Dúrcal", "española");
+
+ 
+
+ 
+
+Nota: No deje líneas en blanco antes del create
+
+3.  Código SQL para Modificar  los siguientes datos:
+
+3.1 Cambiar  el año de la canción "amiga" por 1988
+
+3.2 Cambiar el teléfono del participante   "jairve" por 3115678432
+
+3.3 Borrar la presentación del participante "camiru" con la canción "Tú"
+
+
+NOTA: Generar un archivo script sql para las modificaciones y borrados
+
+4. Código SQL para realizar las siguientes consultas:
+
+
+4.1 Mostrar la información del título de todas las canciones y bailes ordenados alfabéticamente.
+
+4.2 Mostrar la información de las canciones (nombre, genero, año) que se han creado posteriormente al año 2000, ordenadas por nombre
+4.3 Mostrar los nombres de las canciones cuyo cantante original es Rocío Dúrcal
+
+5.4  Mostrar la información de los bailes y canciones ( solo los nombres) con las que participo "rortiz", ordenadas por nombre
+
+4.5 Mostrar la información de los participantes (alias y nombre y apellidos) que han concursado con la canción  "Las locuras mías"
+
+4.6 Mostrar cuantas canciones se han creado después del año 2020
+
+NOTA: Generar un archivo script sql para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
+
+Ejemplo:
+
+Select 'Consulta 1';
+Select titulo from ....;
+Select 'Consulta 2';
+Select .....;
+Select 'Consulta 3';
+Select .....;
+
+ENTREGA
+
+Para la entrega es necesario:
+
+1. Subir cada uno de los archivos .sql en orden de ejecución. Es decir, primero se suben las tablas que no tienen Referencias (Llaves foráneas) y luego las demás. 
+2. Luego de subir los scripts de sql de creación e inserción de datos, se debe subir el de actualizaciones y por último el de consultas. 
+3. Luego se evalúa, igual que con los retos anteriores. Si todo está correcto, tanto las inserciones, como las modificaciones y las consultas, se obtendrá una nota de 5/5. Si hay un error la evaluación será 0. Por lo que será necesario que revisen hasta que las salidas sean las correctas

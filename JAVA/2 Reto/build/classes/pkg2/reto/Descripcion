@@ -1,0 +1,118 @@
+Reto 2: Grupo P24_C2
+ Número máximo de ficheros: 4
+Tipo de trabajo:  Individual
+Una tienda quiere implementar un programa para el registro del inventario de los productos que vende. Cada producto tiene como atributos costo del producto, cantidad en existencia, código del producto y nombre del producto 
+
+Se tienen dos tipos de productos: Refrigerados y No refrigerados. Para los productos refrigerados se debe tener también la temperatura a la cual deben permanecer y para los productos no refrigerados se debe conocer el país de procedencia.
+
+Considere la especificación del siguiente diagrama de clases para este reto:
+
+Seleccionar opciones
+
+En la clase Tienda, se debe definir la función seleccionar opciones que realiza las siguientes operaciones:
+
+Agregar producto: Opción 1
+
+Se puede añadir un producto de tipo refrigerado con el siguiente comando:
+
+1&Refrigerado&cantidad&costo&codigo&temperatura
+
+Ejemplo:
+
+1&Refrigerado&1000&50000&221&-5
+
+Se puede añadir un producto de tipo no refrigerado con el siguiente comando:
+
+1&Norefrigerado&cantidad&costo&codigo&pais
+
+Ejemplo:
+
+1&Norefrigerado&2000&16000&222&Chile
+
+ Listar productos de la tienda: Opción 2
+
+Se debe mostrar la frase: “***Inventario de productos***” Seguida por los productos en el orden en el que fueron agregados.
+
+Si se trata de un producto no refrigerado se mostrará así. Recuerde que \t implica correr el ítem unos espacios a la derecha:
+
+\tProducto No refrigerado - Código: 222
+
+\tcosto: 16000 pesos
+
+\tcantidad: 1000
+
+\tpaís: Chile
+
+ 
+
+Si se trata de un producto refrigerado se mostrará así:
+
+\tProducto Refrigerado – Código: 221
+
+\tcosto: 50000 pesos
+
+\tcantidad: 2000
+
+\ttemperatura: -5 grados centígrados
+
+ 
+
+Salir: Opción 3
+
+Nota 1: Observe que el único comando que tiene salida es el listar.
+
+Nota 2: En este ejercicio se requiere subir cuatro archivos. 
+
+Uno correspondiente a la clase Producto llamado Producto.java,
+otro correspondiente al Producto no refrigerado llamado NoRefrigerado.java
+otro correspondiente al Producto Refrigerado llamado Refrigerado.java
+otro correspondiente a la Tienda llamado Tienda.java (aquí va el main)
+Recuerde eliminar la línea de package al hacer el envío y utilizar el botón de [+] para agregar más de un archivo de código fuente. 
+ Ejemplo:
+
+Un ejemplo de ejecución del programa es el siguiente:
+
+
+Entrada
+
+Salida
+
+1&Refrigerado&1300&55000&223&-2
+
+1&Refrigerado&1500&55000&226&-3
+
+1&Norefrigerado&3000&20000&230&EEUU
+
+2
+
+3
+
+ 
+
+ 
+
+***Inventario de productos***
+
+       Producto Refrigerado - Código: 223
+
+       costo: 55000 pesos
+
+       cantidad: 1300
+
+       temperatuta: -2 grados centígrados
+
+       Producto Refrigerado - Código: 226
+
+       costo: 55000 pesos
+
+       cantidad: 1500
+
+       temperatuta: -3 grados centígrados
+
+       Producto Norefrigerado - Código: 230
+
+       costo: 20000 pesos
+
+       cantidad: 3000
+
+       país: EEUU 

@@ -1,0 +1,29 @@
+La edad de Humberto es 2 veces la edad de su hermano Pedro más 4, además la suma de las edades de Humberto y Pedro es igual a 5 veces la edad de Jaime.
+
+Dada la edad de Pedro calcule la edad de los otros dos hermanos.
+
+Además de acuerdo con la edad de Jaime se va a clasificar la familia para la entrega de subsidios del estado. Según lo siguiente:
+
+Si la edad de Jaime esta entre 0 y 20 años, se clasifica en nivel uno
+Si la edad de Jaime es mayor que 20 pero menor o igual que 30 se clasifica en nivel 2.
+Si la edad es mayor que 30 pero menor o igual que 50, se clasifica como nivel tres
+Para los otros casos  se clasifica en nivel 4.
+Entrada: un número que representa la edad de Pedro
+
+Salida: tres valores que representan las edades de los hermanos Pedro, Humberto y Jaime  y un mensaje que representa la clasificación familiar.
+
+Prueba
+
+Entrada
+
+12 
+
+
+
+Salida
+
+12  28   8
+
+ uno
+
+
